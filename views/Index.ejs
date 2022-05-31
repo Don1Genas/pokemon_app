@@ -8,5 +8,16 @@
 </head>
 <body>
     <h1>See All The Pokemon!</h1>
+
+    <a href="/">Home Page</a>
+
+    <ul>
+    <% data.map( (pokemon, index) => { %>
+        <li>
+            <%= pokemon.name.replace(/\w/, c => c.toUpperCase())  %> 
+            <!-- <%= pokemon.img %> -->
+        </li>
+    <% })  %>  
+    </ul>
 </body>
 </html>
