@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokemon</title>
 </head>
 <body>
     <h1>See All The Pokemon!</h1>
 
     <a href="/">Home Page</a>
+   
 
     <ul>
     <% data.map( (pokemon, index) => { %>
         <li>
+            <a href="/pokemon/:index">Click Here</a><br>
             <%= pokemon.name.replace(/\w/, c => c.toUpperCase())  %> 
-            <!-- <%= pokemon.img %> -->
+            <img src=" <%= `${pokemon.img}.jpg` %> " >
+            
+
         </li>
     <% })  %>  
     </ul>
