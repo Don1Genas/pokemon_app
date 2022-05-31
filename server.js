@@ -7,6 +7,11 @@ const pokemon = require('./models/pokemon');
 const app = express();
 const PORT = 3000;
 
+
+//Setup view engine
+app.set('view engine', 'ejs')
+app.set('views', './views')
+
 // Create home route
 app.get('/', (req, res) => {
     res.send('Welcome to the Pokemon App!');
@@ -14,7 +19,7 @@ app.get('/', (req, res) => {
 
 // Create pokemon route
 app.get('/pokemon', (req, res) => {
-    res.send(pokemon)
+    res.render('Index', {data: pokemon})
 })
 
 
