@@ -9,19 +9,13 @@
 <body>
     <h1>Gotta Catch 'Em All!</h1>
 
-    <a href="./Index.ejs">Back</a>
-   
+    <a href="/pokemon">Back</a>
 
-    <ul>
-    <% data.map( (pokemon, index) => { %>
-        <li>
-            <a href="/pokemon/:index">Click Here</a><br>
-           <h2> <%= data[index].name.replace(/\w/, c => c.toUpperCase())  %> </h2>
-            <img src=" <%= `${pokemon.img}.jpg` %> " >
-            
-
-        </li>
-    <% })  %>  
-    </ul>
+    <h2> <%= data[index].name.replace(/\w/, c => c.toUpperCase())  %> </h2>
+  
+    <img src=" <%= `${data[index].img}.jpg` %> " >
+        
+       
+    
 </body>
 </html>

@@ -10,17 +10,19 @@
     <h1>See All The Pokemon!</h1>
 
     <a href="/">Home Page</a>
-   
+    <a href="/pokemon/new">Create New Pokemon</a>
+
 
     <ul>
     <% data.map( (pokemon, index) => { %>
         <li>
-            <a href="/pokemon/:index">Click Here</a><br>
-            <%= pokemon.name.replace(/\w/, c => c.toUpperCase())  %> 
-            <img src=" <%= `${pokemon.img}.jpg` %> " >
             
-
+            <%= pokemon.name.replace(/\w/, c => c.toUpperCase())  %> 
+          
+            
         </li>
+        <!-- <a href="/pokemon/:index">Details</a><br> -->
+        <a href='/pokemon/<%= index %>' >Details</a>
     <% })  %>  
     </ul>
 </body>
