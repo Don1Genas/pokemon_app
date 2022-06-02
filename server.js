@@ -25,12 +25,12 @@ app.get('/pokemon', (req, res) => {
 // app.get*"pokemon/:id", (req, res) =>{
 //     res.render("show", {pokemon: pokemon[req.params.id]})
 
-// app.get('/pokemon/:id', (req, res) => {
-//     console.log(req.params);
-//     res.send(req.params.id)
+app.get('/pokemon/:id', (req, res) => {
+    // console.log(req.params);
+    // // res.send(req.params.id)
     // const result = pokemon.filter(item => item.id === Number(req.params.id))
-    // res.render('Show', {data: result[0]} );
-// })
+    res.render('Show', {data: pokemon, index: req.params.id} );
+})
 
 
 // App Listener
