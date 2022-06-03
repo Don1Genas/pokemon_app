@@ -14,7 +14,7 @@
 
 
     <ul>
-    <% data.map( (pokemon, index) => { %>
+    <% data.map( (pokemon) => { %>
         <li>
             
             <%= pokemon.name.replace(/\w/, c => c.toUpperCase())  %> 
@@ -22,7 +22,7 @@
             
         </li>
         <!-- <a href="/pokemon/:index">Details</a><br> -->
-        <a href='/pokemon/<%= index %>' >Details</a>
+        <a href='/pokemon/<%= pokemon._id %>' >Details</a>
     <% })  %>  
     </ul>
 </body>

@@ -9,13 +9,13 @@
 <body>
     <h1>Gotta Catch 'Em All!</h1>
 
-    <a href="/pokemon">Back</a>
 
-    <h2> <%= data[index].name.replace(/\w/, c => c.toUpperCase())  %> </h2>
+    <h2> <%= data.name.replace(/\w/, c => c.toUpperCase())  %> </h2>
   
-    <img src=" <%= `${data[index].img}.jpg` %> " >
+    <img src=" <%= `${data.img}.jpg` %> " >
         
-       
+      
+    <a href="/pokemon">Back</a>
     
 </body>
 </html>
